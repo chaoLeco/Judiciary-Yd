@@ -15,4 +15,6 @@
 //webview 加载
 - (void)webLoadRequestUrl:(NSString *)url;
 
+- (BOOL)isFlag:(id)json;
+
 @end

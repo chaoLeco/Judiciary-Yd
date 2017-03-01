@@ -18,8 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [_tableView setTableFooterView:[UIView new]];
+    
+    WGAlertView *alter = [[WGAlertView alloc]initWithTitle:@"密码修改成功" message:@"需要重新登录" block:^(NSInteger buttonIndex, WGAlertView *alert_) {
+        if (buttonIndex ==0) {
+            
+        }
+    } cancelButtonTitle:@"取消" otherButtonTitles:@"去登录", nil];
+    [alter show];
 }
 
 -(NSArray *)titles

@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		A1F4100434A0E92162C4628F /* libPods-Judiciary-Yd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BD6B56F52E39A7A9C91513 /* libPods-Judiciary-Yd.a */; };
+		DA7725421E66648E00531696 /* ydclose.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7725411E66648E00531696 /* ydclose.png */; };
+		DA7725561E6665B600531696 /* NSObject+WGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7725461E6665B600531696 /* NSObject+WGObject.m */; };
+		DA7725581E6665B600531696 /* NSString+WGString.m in Sources */ = {isa = PBXBuildFile; fileRef = DA77254A1E6665B600531696 /* NSString+WGString.m */; };
+		DA7725591E6665B600531696 /* NSTimer+WGTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA77254C1E6665B600531696 /* NSTimer+WGTimer.m */; };
+		DA77255B1E6665B600531696 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7725501E6665B600531696 /* UIViewController+HUD.m */; };
+		DA77255C1E6665B600531696 /* WGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7725521E6665B600531696 /* WGAlertView.m */; };
+		DA77255D1E6665B600531696 /* XCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7725541E6665B600531696 /* XCTableView.m */; };
+		DA7725601E666CCE00531696 /* UIScrollView+EmptyDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DA77255F1E666CCE00531696 /* UIScrollView+EmptyDataSet.m */; };
+		DA7725661E66897100531696 /* YdnewsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7725651E66897100531696 /* YdnewsListModel.m */; };
+		DA7725691E66CB9600531696 /* Ydyanjing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7725671E66CB9600531696 /* Ydyanjing@2x.png */; };
+		DA77256A1E66CB9600531696 /* YdyanjingH@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7725681E66CB9600531696 /* YdyanjingH@2x.png */; };
 		DA859C6B1E653FD4005603ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA859C6A1E653FD4005603ED /* main.m */; };
 		DA859C741E653FD4005603ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA859C721E653FD4005603ED /* Main.storyboard */; };
 		DA859C761E653FD4005603ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA859C751E653FD4005603ED /* Assets.xcassets */; };
@@ -116,6 +127,25 @@
 /* Begin PBXFileReference section */
 		8589E32CCDAB7EA9FA7310A1 /* Pods-Judiciary-Yd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Judiciary-Yd.release.xcconfig"; path = "Pods/Target Support Files/Pods-Judiciary-Yd/Pods-Judiciary-Yd.release.xcconfig"; sourceTree = "<group>"; };
 		CA774EDDDB492D4541D564F0 /* Pods-Judiciary-Yd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Judiciary-Yd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Judiciary-Yd/Pods-Judiciary-Yd.debug.xcconfig"; sourceTree = "<group>"; };
+		DA7725411E66648E00531696 /* ydclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ydclose.png; sourceTree = "<group>"; };
+		DA7725451E6665B600531696 /* NSObject+WGObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WGObject.h"; sourceTree = "<group>"; };
+		DA7725461E6665B600531696 /* NSObject+WGObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WGObject.m"; sourceTree = "<group>"; };
+		DA7725491E6665B600531696 /* NSString+WGString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WGString.h"; sourceTree = "<group>"; };
+		DA77254A1E6665B600531696 /* NSString+WGString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WGString.m"; sourceTree = "<group>"; };
+		DA77254B1E6665B600531696 /* NSTimer+WGTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+WGTimer.h"; sourceTree = "<group>"; };
+		DA77254C1E6665B600531696 /* NSTimer+WGTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+WGTimer.m"; sourceTree = "<group>"; };
+		DA77254F1E6665B600531696 /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		DA7725501E6665B600531696 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		DA7725511E6665B600531696 /* WGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGAlertView.h; sourceTree = "<group>"; };
+		DA7725521E6665B600531696 /* WGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGAlertView.m; sourceTree = "<group>"; };
+		DA7725531E6665B600531696 /* XCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCTableView.h; sourceTree = "<group>"; };
+		DA7725541E6665B600531696 /* XCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTableView.m; sourceTree = "<group>"; };
+		DA77255E1E666CCE00531696 /* UIScrollView+EmptyDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EmptyDataSet.h"; sourceTree = "<group>"; };
+		DA77255F1E666CCE00531696 /* UIScrollView+EmptyDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EmptyDataSet.m"; sourceTree = "<group>"; };
+		DA7725641E66897100531696 /* YdnewsListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YdnewsListModel.h; sourceTree = "<group>"; };
+		DA7725651E66897100531696 /* YdnewsListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdnewsListModel.m; sourceTree = "<group>"; };
+		DA7725671E66CB9600531696 /* Ydyanjing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ydyanjing@2x.png"; sourceTree = "<group>"; };
+		DA7725681E66CB9600531696 /* YdyanjingH@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YdyanjingH@2x.png"; sourceTree = "<group>"; };
 		DA859C661E653FD4005603ED /* Judiciary-Yd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Judiciary-Yd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA859C6A1E653FD4005603ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA859C731E653FD4005603ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -581,6 +611,8 @@
 		DA859D841E654865005603ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA7725641E66897100531696 /* YdnewsListModel.h */,
+				DA7725651E66897100531696 /* YdnewsListModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -660,6 +692,20 @@
 				DA859E4A1E656C85005603ED /* XCNetworking.m */,
 				DA859DA01E654865005603ED /* OrderPickerView.h */,
 				DA859DA11E654865005603ED /* OrderPickerView.m */,
+				DA7725451E6665B600531696 /* NSObject+WGObject.h */,
+				DA7725461E6665B600531696 /* NSObject+WGObject.m */,
+				DA7725491E6665B600531696 /* NSString+WGString.h */,
+				DA77254A1E6665B600531696 /* NSString+WGString.m */,
+				DA77254B1E6665B600531696 /* NSTimer+WGTimer.h */,
+				DA77254C1E6665B600531696 /* NSTimer+WGTimer.m */,
+				DA77254F1E6665B600531696 /* UIViewController+HUD.h */,
+				DA7725501E6665B600531696 /* UIViewController+HUD.m */,
+				DA7725511E6665B600531696 /* WGAlertView.h */,
+				DA7725521E6665B600531696 /* WGAlertView.m */,
+				DA7725531E6665B600531696 /* XCTableView.h */,
+				DA7725541E6665B600531696 /* XCTableView.m */,
+				DA77255E1E666CCE00531696 /* UIScrollView+EmptyDataSet.h */,
+				DA77255F1E666CCE00531696 /* UIScrollView+EmptyDataSet.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -701,12 +747,15 @@
 		DA859DE71E654A21005603ED /* me */ = {
 			isa = PBXGroup;
 			children = (
+				DA7725411E66648E00531696 /* ydclose.png */,
 				DA859DE81E654A2C005603ED /* jiantou@2x.png */,
 				DA859DE91E654A2C005603ED /* fankui@2x.png */,
 				DA859DEA1E654A2C005603ED /* guanyu@2x.png */,
 				DA859DEB1E654A2C005603ED /* qianbao@2x.png */,
 				DA859DEC1E654A2C005603ED /* renzheng@2x.png */,
 				DA859DED1E654A2C005603ED /* shezhi@2x.png */,
+				DA7725671E66CB9600531696 /* Ydyanjing@2x.png */,
+				DA7725681E66CB9600531696 /* YdyanjingH@2x.png */,
 			);
 			name = me;
 			sourceTree = "<group>";
@@ -858,6 +907,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA859DFE1E654A42005603ED /* indexIcon_1@2x.png in Resources */,
+				DA77256A1E66CB9600531696 /* YdyanjingH@2x.png in Resources */,
 				DA859DE61E654A19005603ED /* loginBgImg.jpg in Resources */,
 				DA859E1C1E654A67005603ED /* btnIcon_5@2x.png in Resources */,
 				DA859DF21E654A2C005603ED /* renzheng@2x.png in Resources */,
@@ -870,6 +920,7 @@
 				DA859E061E654A42005603ED /* indexIcon_9@2x.png in Resources */,
 				DA859E011E654A42005603ED /* indexIcon_4@2x.png in Resources */,
 				DA859E171E654A67005603ED /* btnIcon_2@3x.png in Resources */,
+				DA7725421E66648E00531696 /* ydclose.png in Resources */,
 				DA859DEE1E654A2C005603ED /* jiantou@2x.png in Resources */,
 				DA859E1A1E654A67005603ED /* btnIcon_4@2x.png in Resources */,
 				DA859E161E654A67005603ED /* btnIcon_2@2x.png in Resources */,
@@ -889,6 +940,7 @@
 				DA859DE11E654A19005603ED /* QQ20170221-161723.png in Resources */,
 				DA859DF11E654A2C005603ED /* qianbao@2x.png in Resources */,
 				DA859E1D1E654A67005603ED /* btnIcon_5@3x.png in Resources */,
+				DA7725691E66CB9600531696 /* Ydyanjing@2x.png in Resources */,
 				DA859C741E653FD4005603ED /* Main.storyboard in Resources */,
 				DA859E141E654A67005603ED /* btnIcon_1@2x.png in Resources */,
 				DA859DE51E654A19005603ED /* ad_4.jpg in Resources */,
@@ -964,11 +1016,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7725581E6665B600531696 /* NSString+WGString.m in Sources */,
 				DA859DD01E654865005603ED /* YdRegisteredViewController.m in Sources */,
 				DA859DCF1E654865005603ED /* YdLodinViewController.m in Sources */,
 				DA859DC81E654865005603ED /* YdConsultingTableViewCell.m in Sources */,
+				DA77255D1E6665B600531696 /* XCTableView.m in Sources */,
 				DA859E4B1E656C85005603ED /* XCNetworking.m in Sources */,
 				DA859DC61E654865005603ED /* YdConsultingViewController.m in Sources */,
+				DA7725661E66897100531696 /* YdnewsListModel.m in Sources */,
 				DA859DCB1E654865005603ED /* YdListViewController.m in Sources */,
 				DA859E481E65631D005603ED /* YdLodinTools.m in Sources */,
 				DA859DD51E654865005603ED /* YdMeViewController.m in Sources */,
@@ -981,13 +1036,18 @@
 				DA859DD11E654865005603ED /* YdAboutmeViewController.m in Sources */,
 				DA859DD21E654865005603ED /* YdchangePhoneViewController.m in Sources */,
 				DA859DC71E654865005603ED /* YdLawyerWebViewController.m in Sources */,
+				DA7725561E6665B600531696 /* NSObject+WGObject.m in Sources */,
 				DA859DCC1E654865005603ED /* YdwebViewController.m in Sources */,
 				DA859DCE1E654865005603ED /* YdListTableViewCell.m in Sources */,
 				DA859DD61E654865005603ED /* YdSetViewController.m in Sources */,
 				DA859DD71E654865005603ED /* OrderPickerView.m in Sources */,
+				DA7725591E6665B600531696 /* NSTimer+WGTimer.m in Sources */,
+				DA77255C1E6665B600531696 /* WGAlertView.m in Sources */,
+				DA77255B1E6665B600531696 /* UIViewController+HUD.m in Sources */,
 				DA859D081E6547A4005603ED /* AppDelegate.m in Sources */,
 				DA859DCD1E654865005603ED /* YdHomeTableViewCell.m in Sources */,
 				DA859DD31E654865005603ED /* YdchangepwViewController.m in Sources */,
+				DA7725601E666CCE00531696 /* UIScrollView+EmptyDataSet.m in Sources */,
 				DA859DC91E654865005603ED /* YdForumViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

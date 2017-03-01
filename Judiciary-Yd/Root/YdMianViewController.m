@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [kNotificationCenter addObserver:self selector:@selector(selectedIndex:) name:Yd_Tabbar_selectedIndex object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +24,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)selectedIndex:(NSNotification *)obj
+{
+    if (obj) {
+        self.selectedIndex = [obj.object integerValue];
+    }
+}
 /*
 #pragma mark - Navigation
 

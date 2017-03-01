@@ -36,6 +36,22 @@
     [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
+
+- (BOOL)isFlag:(id)json
+{
+    if (json) {
+        if ([json[@"flag"] intValue] ==1) {
+            return YES;
+        }else{
+            [self showHint:json[@"message"]];
+            return NO;
+        }
+    }else{
+        [self showHint:@"数据获取失败！"];
+        return NO;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

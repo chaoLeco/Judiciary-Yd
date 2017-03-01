@@ -76,28 +76,30 @@
     switch (sender.tag) {
         case 101:
             //法律条文
-            [self performSegueWithIdentifier:@"pushYdListViewControllerSegue" sender:@"法律条文"];
+            [self performSegueWithIdentifier:@"pushYdListViewControllerSegue" sender:@"1"];
             break;
         case 102:
             //司法解释
-            [self performSegueWithIdentifier:@"pushYdListViewControllerSegue" sender:@"司法解释"];
+            [self performSegueWithIdentifier:@"pushYdListViewControllerSegue" sender:@"2"];
             break;
         case 103:
             //司法案例
-            [self performSegueWithIdentifier:@"pushYdListViewControllerSegue" sender:@"司法案例"];
+            [self performSegueWithIdentifier:@"pushYdListViewControllerSegue" sender:@"3"];
             break;
         case 104:
             //法律文献
-            [self performSegueWithIdentifier:@"pushYdListViewControllerSegue" sender:@"法律文献"];
+            [self performSegueWithIdentifier:@"pushYdListViewControllerSegue" sender:@"4"];
             break;
         case 105:
             //在线咨询
+            [kNotificationCenter postNotificationName:Yd_Tabbar_selectedIndex object:@1];
             break;
         case 106:
             //费用咨询
             break;
         case 107:
             //法律援助
+            [kNotificationCenter postNotificationName:Yd_Tabbar_selectedIndex object:@3];
             break;
         case 108:
             //文书下载
@@ -105,6 +107,7 @@
             break;
         case 109:
             //论坛
+            [kNotificationCenter postNotificationName:Yd_Tabbar_selectedIndex object:@2];
             break;
 
         default:
@@ -122,7 +125,7 @@
     UIViewController *vc = [segue destinationViewController];
     if ([vc isKindOfClass:[YdListViewController class]]) {
         YdListViewController *ydList = (YdListViewController *)vc;
-        ydList.title = sender;
+        ydList.newstype = sender;
     }
 }
 

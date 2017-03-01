@@ -15,9 +15,7 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - FDFullscreenPopGesture (1.1)
-  - Mantle (2.1.0):
-    - Mantle/extobjc (= 2.1.0)
-  - Mantle/extobjc (2.1.0)
+  - JSONModel (1.7.0)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
   - RongCloudIM/CallKit (2.8.6):
@@ -39,7 +37,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - FDFullscreenPopGesture (~> 1.1)
-  - Mantle (~> 2.1.0)
+  - JSONModel (~> 1.7.0)
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.12)
   - RongCloudIM/CallKit (~> 2.8.6)
@@ -53,7 +51,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   RongCloudIM: f35630e60f7d393ea93b04d4cd6152c9191b8d05
@@ -61,6 +59,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
 
-PODFILE CHECKSUM: 11b6ddabe3b21b54de631b76dbcd6574de3f2729
+PODFILE CHECKSUM: 94eccbf5b55ba2ee500406d9a657cf6b480aa997
 
 COCOAPODS: 1.2.0

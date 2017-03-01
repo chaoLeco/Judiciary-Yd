@@ -82,8 +82,8 @@
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //设置请求格式
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     // 设置超时时间
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = 5.f;
@@ -113,8 +113,8 @@
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //设置请求格式
-//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     // 设置超时时间
 //    [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
 //    manager.requestSerializer.timeoutInterval = 5.f;

@@ -148,6 +148,6 @@ NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];              
 #define k_REMOVE_OBJECT(key) [[NSUserDefaults standardUserDefaults] removeObjectForKey:key]
 
 // token
-#define k_SET_TOKEN(tokenStr)  k_SET_OBJECT(tokenStr,@"token");
-#define k_GET_TOKEN  k_GET_OBJECT(@"token");
-#define k_REMOVE_TOKEN  [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"token"];
+#define k_SET_TOKEN(tokenStr)  k_SET_OBJECT(tokenStr,Yd_user_token);
+#define k_GET_TOKEN  k_GET_OBJECT(Yd_user_token);
+#define k_REMOVE_TOKEN  [[NSUserDefaults standardUserDefaults]removeObjectForKey:Yd_user_token];
