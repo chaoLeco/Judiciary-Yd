@@ -11,7 +11,7 @@
 @interface OrderPickerView : UIView
 
 
-typedef void (^pickerViewBlock)(id data);
+typedef void (^pickerViewBlock)(id data ,NSIndexPath *path);
 /**
  *  普通的PickerView
  *

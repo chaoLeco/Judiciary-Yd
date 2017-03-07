@@ -34,7 +34,7 @@
 
 #define Yd_url_basis @"http://59.110.166.204/"
 #define Yd_url_sifanvsheng Yd_url_basis@"sifanvshen/index.php/"
-
+#define Yd_imgUrl_basis Yd_url_basis@"sifanvshen/"
 #pragma mark - 注册登录 -
 //1、用户注册
 //接口地址：/sifanvshen/index.php/Home/User/userRegister
@@ -181,6 +181,66 @@
 
 #define Yd_url_deleteFeedback Yd_url_sifanvsheng@"Home/User/deleteFeedback"
 
+#pragma mark - 城市接口 -
+
+//1、获取省份列表
+//接口地址：sifanvshen/index.php/Home/Citys/getProvince
+//
+//接口示例：http://localhost/sifanvshen/index.php/Home/Citys/getProvince
+//
+//提交数据：
+//提交类型：GET
+//
+//返回数据：flag=0:失败 flag=1:成功 id-省份id parent_id-省份id（城市的父id） name-城市名 sort-分类
+//{
+//    "flag": "1",
+//    "message": "查询成功",
+//    "data": [
+//    {
+//        "id": "100",
+//        "parent_id": "0",
+//        "name": "安徽",
+//        "sort": "1"
+//    },
+//    {
+//        "id": "200",
+//        "parent_id": "0",
+//        "name": "澳门",
+//        "sort": "2"
+//    }
+//             ]
+//}
+#define Yd_url_getProvince Yd_url_sifanvsheng@"Home/Citys/getProvince"
+//2、获取城市列表
+//
+//接口地址：sifanvshen/index.php/Home/Citys/getCity
+//
+//接口示例：http://localhost/sifanvshen/index.php/Home/Citys/getCity?id=3400
+//
+//提交数据：id-省份id
+//提交类型：GET
+//
+//返回数据：flag=0:失败 flag=1:成功 id-城市id parent_id-省份id（城市的父id） name-城市名 sort-分类
+//{
+//    "flag": "1",
+//    "message": "查询成功",
+//    "data": [
+//    {
+//        "id": "3401",
+//        "parent_id": "3400",
+//        "name": "杭州", 
+//        "sort": "34" 
+//    }, 
+//    { 
+//        "id": "3402", 
+//        "parent_id": "3400", 
+//        "name": "湖州", 
+//        "sort": "34" 
+//    } 
+//             ] 
+//}
+#define Yd_url_getCity Yd_url_sifanvsheng@"Home/Citys/getCity"
+
 #pragma mark - 新闻接口 -
 
 //1、添加新闻
@@ -309,7 +369,7 @@
 //                                           返回数据：flag=0:失败 flag=1:成功 
 //{"flag":"1","message":"新增成功"}
 
-#define Yd_url_assistanceAdd Yd_url_sifanvsheng@"HHome/Assistance/assistanceAdd"
+#define Yd_url_assistanceAdd Yd_url_sifanvsheng@"Home/Assistance/assistanceAdd"
 
 
 //2、法律援助列表查询
@@ -354,7 +414,7 @@
 //             ] 
 //}
 
-#define Yd_url_getAssistanceList Yd_url_sifanvsheng@"HHome/Assistance/getAssistanceList"
+#define Yd_url_getAssistanceList Yd_url_sifanvsheng@"Home/Assistance/getAssistanceList"
 
 //3、法律援助详情查询
 //接口地址：sifanvshen/index.php/Home/Assistance/getAssistanceDetail
@@ -384,7 +444,7 @@
 //    } 
 //}
 
-#define Yd_url_getAssistanceDetail Yd_url_sifanvsheng@"HHome/Assistance/getAssistanceDetail"
+#define Yd_url_getAssistanceDetail Yd_url_sifanvsheng@"Home/Assistance/getAssistanceDetail"
 
 //4、法律援助申请删除
 //接口地址：sifanvshen/index.php/Home/Assistance/deleteAssistance
@@ -398,4 +458,89 @@
 //
 //返回数据：flag=0:失败 flag=1:成功
 //{"flag":"1","message":"删除成功"}
-#define Yd_url_deleteAssistance Yd_url_sifanvsheng@"HHome/Assistance/deleteAssistance"
+#define Yd_url_deleteAssistance Yd_url_sifanvsheng@"Home/Assistance/deleteAssistance"
+
+#pragma mark - 律师接口 -
+
+//1、认证律师提交
+//接口地址：sifanvshen/index.php/Home/Lawyer/lawyerAuthenUpload
+//
+//接口示例：http://localhost/sifanvshen/index.php/Home/Lawyer/lawyerAuthenUpload
+//
+//提交数据：
+//userid-律师对应普通用户id lowyeraddress-律师地址（省代码-市代码 青海-西宁 例：2200-2201） lowyername-律师真实姓名 lowyercompany-律师事务所 lowyercode-律师执业证号（暂定14位）
+//lowyerabstract-律师简介 lowyerwx-律师微信 lowyerqq-律师QQ lowyerphone-律师手机号
+//inimage-律师执业证内页 yearimage-年检证
+//提交类型：POST
+//
+//返回数据：flag=0:失败 flag=1:成功
+//{"flag":"1","message":"新增成功"}
+
+#define Yd_url_lawyerAuthenUpload Yd_url_sifanvsheng@"Home/Lawyer/lawyerAuthenUpload"
+
+//2、律师列表获取
+//接口地址：sifanvshen/index.php/Home/Lawyer/getAssistanceList
+//
+//接口示例：http://localhost/sifanvshen/index.php/Home/Lawyer/getAssistanceList?page=1&rownum=10
+//
+//提交数据：
+//page-页数 rownum-每页显示条数
+//
+//提交类型：POST、GET
+//
+//返回数据：flag=0:失败 flag=1:成功
+//{
+//    "flag": "1",
+//    "message": "查询成功",
+//    "sumnum": "12",
+//    "data": [
+//    {
+//        "lawyer_id": "12",
+//        "lawyer_userid": "11",
+//        "lawyer_address": "100-1002",
+//        "lawyer_username": "老狼啊",
+//        "lawyer_company": "北京律师事务所",
+//        "lawyer_lowyercode": "12345678901234",
+//        "lawyer_inimage": "/uploads/lawyerimage/20170302/58b7e1b17d7ba.jpg",
+//        "lawyer_yearimage": "/uploads/lawyerimage/20170302/58b7e1b17f507.jpg",
+//        "lawyer_abstract": "我是个律师",
+//        "lawyer_state": "0",
+//        "lawyer_praise": "1",
+//        "lawyer_comment": "0"
+//    }
+//             ]
+//}
+#define Yd_url_lawyergetAssistanceList Yd_url_sifanvsheng@"Home/Lawyer/getAssistanceList"
+//3、获取律师详情
+//接口地址：sifanvshen/index.php/Home/Lawyer/getLawyerDetail
+//
+//接口示例：http://localhost/sifanvshen/index.php/Home/Lawyer/getLawyerDetail?id=2
+//
+//提交数据：
+//id-律师id
+//
+//提交类型：POST、GET
+//
+//返回数据：flag=0:失败 flag=1:成功
+//{
+//    "flag": "1",
+//    "message": "查询成功",
+//    "data": {
+//        "lawyer_id": "1",
+//        "lawyer_userid": "1",
+//        "lawyer_address": "青海-西宁",
+//        "lawyer_username": "老狼",
+//        "lawyer_company": "北京律师事务所",
+//        "lawyer_lowyercode": "12345678901234",
+//        "lawyer_inimage": "/uploads/lawyerimage/20170302/58b7e8f6926fe.jpg",
+//        "lawyer_yearimage": "/uploads/lawyerimage/20170302/58b7e8f694062.png",
+//        "lawyer_abstract": "我是个律师啊", 
+//        "lawyer_wx": "myweixin", 
+//        "lawyer_qq": "547201260", 
+//        "lawyer_phone": "15210181617", 
+//        "lawyer_state": "0", 
+//        "lawyer_praise": "1", 
+//        "lawyer_comment": "0" 
+//    } 
+//}
+#define Yd_url_getLawyerDetail Yd_url_sifanvsheng@"Home/Lawyer/getAssistanceList"

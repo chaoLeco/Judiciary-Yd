@@ -12,8 +12,6 @@
 #import "YdnewsListModel.h"
 @interface YdListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (assign,nonatomic) NSInteger nowPage;
-@property (assign,nonatomic) NSInteger totalPage;
 @property (strong,nonatomic) NSMutableArray *dataSource;
 @end
 
@@ -22,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setItemtitle];
-    [self setTableRefresh];
+    [self tableRefresh:_tableView];
+    [self getDataSource];
 }
 
 - (void)setItemtitle
@@ -44,31 +43,6 @@
         default:
             break;
     }
-}
-
-- (void)setTableRefresh
-{
-    _nowPage = 1;
-    _nowPage = 1;
-    [_tableView setTableFooterView:[UIView new]];
-    _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [_tableView.mj_footer endRefreshing];
-        });
-        if (++_nowPage >_totalPage) {
-            _nowPage = _totalPage;
-            [_tableView.mj_footer endRefreshing];
-            [self showHint:@"没有更多了"];
-        }else
-            [self getDataSource];
-    }];
-    _tableView.mj_header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
-        _nowPage = 1;
-        [self getDataSource];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [_tableView.mj_header endRefreshing];
-        });
-    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,6 +67,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"pushYdwebViewControllerSegue" sender:self.navigationItem.title];
 }
 
@@ -105,13 +80,13 @@
 - (void)getDataSource
 {
     if (_newstype) {
-        NSDictionary *dic = @{@"newtype":_newstype,@"rownum":@"10",@"page":[NSString stringWithFormat:@"%ld",_nowPage]};
+        NSDictionary *dic = @{@"newtype":_newstype,@"rownum":@"10",@"page":[NSString stringWithFormat:@"%ld",(long)self.nowPage]};
         [XCNetworking XC_GET_JSONDataWithUrl:Yd_url_getNewsList Params:dic success:^(id json) {
             if ([self isFlag:json]) {
-                if (_nowPage ==1) {
+                if (self.nowPage ==1) {
                     _dataSource = [NSMutableArray array];
                 }
-                _totalPage = [json[@"sumnum"] integerValue];
+                self.totalPage = [json[@"sumnum"] integerValue];
                 NSArray *data = json[@"data"];
                 for (NSDictionary *dic in data) {
                     NSError *error;

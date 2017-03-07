@@ -8,32 +8,69 @@
 
 #import "YdConsultingViewController.h"
 #import "YdConsultingTableViewCell.h"
+#import "YdAssistanceModel.h"
 @interface YdConsultingViewController ()
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong,nonatomic) NSMutableArray *dataSource;
 @end
 
 @implementation YdConsultingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self tableRefresh:_tableView];
+    [self getDataSource];
+}
+
+
+- (void)getDataSource
+{
+    NSDictionary *dic = @{@"rownum":@"10",@"page":[NSString stringWithFormat:@"%ld",(long)self.nowPage]};
+    [XCNetworking XC_GET_JSONDataWithUrl:Yd_url_lawyergetAssistanceList Params:dic success:^(id json) {
+        if ([self isFlag:json]) {
+            if (self.nowPage ==1) {
+                _dataSource = [NSMutableArray array];
+            }
+            self.totalPage = [json[@"sumnum"] integerValue];
+            NSArray *data = json[@"data"];
+            for (NSDictionary *dic in data) {
+                NSError *error;
+                YdAssistanceModel *model = [[YdAssistanceModel alloc]initWithDictionary:dic error:&error];
+                if (!error) {
+                    [_dataSource addObject:model];
+                }
+            }
+            [_tableView reloadData];
+        }
+        [_tableView.mj_header endRefreshing];
+        [_tableView.mj_header endRefreshing];
+    } fail:^(NSError *error) {
+        NSLog(@"网络错误");
+        [self showHint:@"网络错误"];
+        [_tableView.mj_header endRefreshing];
+        [_tableView.mj_header endRefreshing];
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return _dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     YdConsultingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YdConsultingTableViewCell"];
+    [cell setValue:_dataSource[indexPath.row]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"pushYdLawyerWebViewControllerSegue" sender:nil];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

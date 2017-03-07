@@ -21,6 +21,8 @@
 
 @property(nonatomic ,strong) NSMutableArray *blockStrs;
 @property(nonatomic ,strong) NSString *blockStr;
+@property(nonatomic ,strong
+          ) NSIndexPath *blockIndexPath;
 
 @property(nonatomic ,strong) UIPickerView *pickerView;
 @end
@@ -123,7 +125,7 @@
     [self moveAnimate:CGRectGetHeight(KBounds) + 200/2];
     [self performSelector:@selector(alphaAnimate) withObject:nil afterDelay:0.3];
     if (_block) {
-        _block(nil);
+        _block(nil,_blockIndexPath);
     }
 }
 
@@ -132,7 +134,7 @@
     [self moveAnimate:CGRectGetHeight(KBounds) + 200/2];
     [self performSelector:@selector(alphaAnimate) withObject:nil afterDelay:0.3];
     if (_block) {
-        _block(_blockStr);
+        _block(_blockStr,_blockIndexPath);
     }
 }
 
@@ -196,6 +198,7 @@
         NSDateFormatter *pickerFormatter = [[NSDateFormatter alloc] init];
         [pickerFormatter setDateFormat:@"yyyy年MM月dd日"];
         _blockStr = [pickerFormatter stringFromDate:dataPicker.date];
+        _blockIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 //        if (_block) {
 //            _block(_blockStr);
 //        }
@@ -216,8 +219,10 @@
         for (NSString *itme in _blockStrs) {
             _blockStr = [NSString stringWithFormat:@"%@%@",_blockStr,itme];
         }
+        _blockIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     }else{
         _blockStr = [_data firstObject];
+        _blockIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     }
     [_pickerView reloadAllComponents];
 }
@@ -269,8 +274,10 @@
         _blockStr = @"";
         for (NSString *itme in _blockStrs) {
             _blockStr = [NSString stringWithFormat:@"%@%@",_blockStr,itme];
+            _blockIndexPath = [NSIndexPath indexPathForRow:row inSection:component];
         }
     }else {
+        _blockIndexPath = [NSIndexPath indexPathForRow:row inSection:0];
         _blockStr = _data[row];
     }
 //    if (_block) {

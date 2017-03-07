@@ -24,7 +24,8 @@
 #import "NSString+WGString.h"
 #import "NSTimer+WGTimer.h"
 
-#import "UIImageView+WebCache.h"
+//#import "UIImageView+WebCache.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
 #import "MJRefresh.h"
 #import "WGAlertView.h"
 #endif

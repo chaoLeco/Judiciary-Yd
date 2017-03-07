@@ -28,7 +28,7 @@
 - (SDCycleScrollView *)cycleScrollView
 {
     if (!_cycleScrollView) {
-        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:_banner.bounds delegate:self placeholderImage:nil];
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGRectGetWidth(KBounds), CGRectGetHeight(_banner.bounds)) delegate:self placeholderImage:nil];
     }
     return _cycleScrollView;
 }
@@ -48,7 +48,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

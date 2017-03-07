@@ -24,7 +24,7 @@
 - (SDCycleScrollView *)cycleScrollView
 {
     if (!_cycleScrollView) {
-        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:_bannerView.bounds delegate:self placeholderImage:nil];
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGRectGetWidth(KBounds), CGRectGetHeight(_bannerView.bounds)) delegate:self placeholderImage:nil];
         _cycleScrollView.hidesForSinglePage = YES;
         [_bannerView addSubview:_cycleScrollView];
     }

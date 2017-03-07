@@ -10,6 +10,7 @@
 
 @interface YdFeedbackViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblplaceholder;
+@property (weak, nonatomic) IBOutlet UITextView *txt;
 
 @end
 
@@ -30,6 +31,27 @@
     
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (IBAction)submitAction:(id)sender {
+    [_txt resignFirstResponder];
+    if (_txt.text.length>0) {
+        NSString *token = k_GET_TOKEN
+        NSString *userid= k_GET_OBJECT(Yd_user_id);
+        if (token&&userid) {
+            [XCNetworking XC_GET_JSONDataWithUrl:Yd_url_uploadFeedback Params:@{@"userid":userid,@"content":_txt.text} success:^(id json) {
+                if ([self isFlag:json]) {
+                    [self showHint:@"已收到您宝贵的意见建议"];
+                    [self.navigationController popViewControllerAnimated:YES];
+                }
+            } fail:^(NSError *error) {
+                [self showHint:@"网络错误"];
+            }];
+        }else [self notLogin];
+    }else
+        [self showHint:@"请输入反馈内容"];
+
+}
+
 
 #pragma mark - TextFieldDelegate -
 
@@ -71,6 +93,12 @@
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         return NO;
+    }
+    if (textView.text.length>499) {
+        if (text.length==0) {
+            return YES;
+        }else
+            return NO;
     }
     if (text.length>0) {
 

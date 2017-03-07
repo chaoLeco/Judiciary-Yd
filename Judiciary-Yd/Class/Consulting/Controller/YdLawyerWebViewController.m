@@ -47,6 +47,7 @@ targetId:Yd_RCIM_ID];
     //设置聊天会话界面要显示的标题
     chat.title = @"Talk";
     //显示聊天会话界面
+
     [self.navigationController pushViewController:chat animated:YES];
 }
 

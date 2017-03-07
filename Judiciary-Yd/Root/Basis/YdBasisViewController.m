@@ -52,6 +52,52 @@
     }
 }
 
+- (void)notLogin
+{
+//    未登录的处理
+    k_REMOVE_TOKEN;
+    k_REMOVE_OBJECT(Yd_user_id);
+    k_REMOVE_OBJECT(Yd_user_phone);
+    k_REMOVE_OBJECT(Yd_user_pw);
+    
+    WGAlertView *alter = [[WGAlertView alloc]initWithTitle:@"未登录" message:@"是否重新登录" block:^(NSInteger buttonIndex, WGAlertView *alert_) {
+        if (buttonIndex ==0) {
+            UIViewController *lodinVc = [self.storyboard instantiateViewControllerWithIdentifier:@"YdLodinNavigationViewController"];
+            [self presentViewController:lodinVc animated:YES completion:nil];
+           [kNotificationCenter postNotificationName:Yd_Notification_logout object:nil];
+        }
+    } cancelButtonTitle:@"取消" otherButtonTitles:@"是", nil];
+    [alter show];
+    
+}
+
+- (void)tableRefresh:(UITableView *)_tableView
+{
+    _nowPage = 1;
+    _nowPage = 1;
+    [_tableView setTableFooterView:[UIView new]];
+    _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [_tableView.mj_footer endRefreshing];
+        });
+        if (++_nowPage >_totalPage) {
+            _nowPage = _totalPage;
+            [_tableView.mj_footer endRefreshing];
+            [self showHint:@"没有更多了"];
+        }else
+            [self getDataSource];
+    }];
+    _tableView.mj_header = [MJRefreshStateHeader headerWithRefreshingBlock:^{
+        _nowPage = 1;
+        [self getDataSource];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [_tableView.mj_header endRefreshing];
+        });
+    }];
+}
+
+- (void)getDataSource{}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

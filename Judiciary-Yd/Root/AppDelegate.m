@@ -21,6 +21,9 @@
     
     
     [[RCIM sharedRCIM]initWithAppKey:Yd_RCIM_APPKEY];
+    [[UINavigationBar appearance]setBarTintColor:kRGBColor(153, 2, 12)];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+//    [[RCIM sharedRCIM]setGlobalNavigationBarTintColor:kRGBColor(153, 2, 12)];
     [YdLodinTools loginRongCloud:@"13162839599" userId:Yd_RCIM_ID token:Yd_RCIM_TOKEN password:@"123456"];
     return YES;
 }
