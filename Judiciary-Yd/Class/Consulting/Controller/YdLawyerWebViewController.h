@@ -7,7 +7,7 @@
 //
 
 #import "YdBasisViewController.h"
-
+#import "YdAssistanceModel.h"
 @interface YdLawyerWebViewController : YdBasisViewController
-
+@property (strong, nonatomic) YdAssistanceModel *lawyerInfo;
 @end

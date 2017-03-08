@@ -8,6 +8,7 @@
 
 #import "YdConsultingViewController.h"
 #import "YdConsultingTableViewCell.h"
+#import "YdLawyerWebViewController.h"
 #import "YdAssistanceModel.h"
 @interface YdConsultingViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -67,7 +68,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"pushYdLawyerWebViewControllerSegue" sender:nil];
+     [self performSegueWithIdentifier:@"pushYdLawyerWebViewControllerSegue" sender:_dataSource[indexPath.row]];
 }
 
 
@@ -77,14 +78,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    UIViewController *vc = [segue destinationViewController];
+    if ([vc isKindOfClass:[YdLawyerWebViewController class]]) {
+        YdLawyerWebViewController *Lawyer = (YdLawyerWebViewController *)vc;
+        Lawyer.lawyerInfo = sender;
+    }
 }
-*/
+
 
 @end

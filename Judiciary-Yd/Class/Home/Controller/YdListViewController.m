@@ -59,7 +59,7 @@
 {
     YdListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YdListTableViewCell"];
     YdnewsListModel *model = _dataSource[indexPath.row];
-    [cell.img sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@""]];
+    [cell.img sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Yd_imgUrl_basis,model.news_listimage]] placeholderImage:[UIImage imageNamed:@"Yzwt22.png"]];
     cell.lblTitle.text = model.news_title;
     cell.lblsubTitle.text = model.news_content;
     return cell;
@@ -68,7 +68,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self performSegueWithIdentifier:@"pushYdwebViewControllerSegue" sender:self.navigationItem.title];
+    YdnewsListModel *model = _dataSource[indexPath.row];
+    [self performSegueWithIdentifier:@"pushYdwebViewControllerSegue" sender:model.news_title];
 }
 
 - (IBAction)goback:(UIButton *)sender {
@@ -95,6 +96,7 @@
                         [_dataSource addObject:model];
                     }
                 }
+                [_tableView reloadData];
             }
             [_tableView.mj_header endRefreshing];
             [_tableView.mj_header endRefreshing];

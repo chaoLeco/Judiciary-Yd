@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DXPopover-DXPopover.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>DXPopover.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FDFullscreenPopGesture.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,12 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4923A05CDD5D1C293247BFB6699EC601</key>
+		<key>3E10BAB7C04B64DE2488F7AC40E31383</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C217162A5A7CAEE8B3D2816698304FA</key>
+		<key>50C86FD934587263ECF3085F797D57E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>979AFBDB76B9DF964E7280BFF5CB67FF</key>
+		<key>618B2C6F01FA7B86CB2D100545659FAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC21D4EC2D9997AB508C9BC20127D0EE</key>
+		<key>A6DA6873D77707361F50CAA0AB0BFD26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAE9E5B44A540334E8425F83106A092F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECE9813DF6250318FB482898ABDFE5B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

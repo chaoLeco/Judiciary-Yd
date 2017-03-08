@@ -17,6 +17,11 @@
 		DA6B76C11E67BD15009DF778 /* Ydlvshi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6B76C01E67BD15009DF778 /* Ydlvshi@2x.png */; };
 		DA6B76C41E67BEE1009DF778 /* YdUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6B76C31E67BEE1009DF778 /* YdUserInfoViewController.m */; };
 		DA6B76C71E67CD9D009DF778 /* YdeditorInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6B76C61E67CD9D009DF778 /* YdeditorInfoViewController.m */; };
+		DA6E6DA41E6FA72B00372909 /* yd_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6E6DA31E6FA72B00372909 /* yd_down@2x.png */; };
+		DA6E6DA81E6FB1DD00372909 /* yd_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6E6DA71E6FB1DD00372909 /* yd_add@2x.png */; };
+		DA6E6DB31E6FBBF000372909 /* YdMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E6DB21E6FBBF000372909 /* YdMenu.m */; };
+		DA6E6DB61E6FE77800372909 /* YdSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E6DB51E6FE77800372909 /* YdSearchViewController.m */; };
+		DA6E6DB91E6FF6EF00372909 /* YdBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E6DB81E6FF6EF00372909 /* YdBanner.m */; };
 		DA7725421E66648E00531696 /* ydclose.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7725411E66648E00531696 /* ydclose.png */; };
 		DA7725561E6665B600531696 /* NSObject+WGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7725461E6665B600531696 /* NSObject+WGObject.m */; };
 		DA7725581E6665B600531696 /* NSString+WGString.m in Sources */ = {isa = PBXBuildFile; fileRef = DA77254A1E6665B600531696 /* NSString+WGString.m */; };
@@ -114,7 +119,6 @@
 		DA859E451E6555C3005603ED /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA859E441E6555C3005603ED /* AssetsLibrary.framework */; };
 		DA859E481E65631D005603ED /* YdLodinTools.m in Sources */ = {isa = PBXBuildFile; fileRef = DA859E471E65631D005603ED /* YdLodinTools.m */; };
 		DA859E4B1E656C85005603ED /* XCNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DA859E4A1E656C85005603ED /* XCNetworking.m */; };
-		DAA414951E6E5A89004FB7E1 /* yd_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA414941E6E5A89004FB7E1 /* yd_add@2x.png */; };
 		DAA414981E6E6909004FB7E1 /* YdCity.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA414971E6E6909004FB7E1 /* YdCity.m */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +156,14 @@
 		DA6B76C31E67BEE1009DF778 /* YdUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdUserInfoViewController.m; sourceTree = "<group>"; };
 		DA6B76C51E67CD9D009DF778 /* YdeditorInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YdeditorInfoViewController.h; sourceTree = "<group>"; };
 		DA6B76C61E67CD9D009DF778 /* YdeditorInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdeditorInfoViewController.m; sourceTree = "<group>"; };
+		DA6E6DA31E6FA72B00372909 /* yd_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yd_down@2x.png"; sourceTree = "<group>"; };
+		DA6E6DA71E6FB1DD00372909 /* yd_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yd_add@2x.png"; sourceTree = "<group>"; };
+		DA6E6DB11E6FBBF000372909 /* YdMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YdMenu.h; sourceTree = "<group>"; };
+		DA6E6DB21E6FBBF000372909 /* YdMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdMenu.m; sourceTree = "<group>"; };
+		DA6E6DB41E6FE77800372909 /* YdSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YdSearchViewController.h; sourceTree = "<group>"; };
+		DA6E6DB51E6FE77800372909 /* YdSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdSearchViewController.m; sourceTree = "<group>"; };
+		DA6E6DB71E6FF6EF00372909 /* YdBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YdBanner.h; sourceTree = "<group>"; };
+		DA6E6DB81E6FF6EF00372909 /* YdBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdBanner.m; sourceTree = "<group>"; };
 		DA7725411E66648E00531696 /* ydclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ydclose.png; sourceTree = "<group>"; };
 		DA7725451E6665B600531696 /* NSObject+WGObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WGObject.h"; sourceTree = "<group>"; };
 		DA7725461E6665B600531696 /* NSObject+WGObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WGObject.m"; sourceTree = "<group>"; };
@@ -296,7 +308,6 @@
 		DA859E471E65631D005603ED /* YdLodinTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdLodinTools.m; sourceTree = "<group>"; };
 		DA859E491E656C85005603ED /* XCNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNetworking.h; sourceTree = "<group>"; };
 		DA859E4A1E656C85005603ED /* XCNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNetworking.m; sourceTree = "<group>"; };
-		DAA414941E6E5A89004FB7E1 /* yd_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yd_add@2x.png"; sourceTree = "<group>"; };
 		DAA414961E6E6909004FB7E1 /* YdCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YdCity.h; sourceTree = "<group>"; };
 		DAA414971E6E6909004FB7E1 /* YdCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdCity.m; sourceTree = "<group>"; };
 		F8BD6B56F52E39A7A9C91513 /* libPods-Judiciary-Yd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Judiciary-Yd.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -630,6 +641,8 @@
 			children = (
 				DA859D7E1E654865005603ED /* YdHomeViewController.h */,
 				DA859D7F1E654865005603ED /* YdHomeViewController.m */,
+				DA6E6DB41E6FE77800372909 /* YdSearchViewController.h */,
+				DA6E6DB51E6FE77800372909 /* YdSearchViewController.m */,
 				DA859D801E654865005603ED /* YdListViewController.h */,
 				DA859D811E654865005603ED /* YdListViewController.m */,
 				DA859D821E654865005603ED /* YdwebViewController.h */,
@@ -643,6 +656,8 @@
 			children = (
 				DA7725641E66897100531696 /* YdnewsListModel.h */,
 				DA7725651E66897100531696 /* YdnewsListModel.m */,
+				DA6E6DB71E6FF6EF00372909 /* YdBanner.h */,
+				DA6E6DB81E6FF6EF00372909 /* YdBanner.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -654,6 +669,8 @@
 				DA859D871E654865005603ED /* YdHomeTableViewCell.m */,
 				DA859D881E654865005603ED /* YdListTableViewCell.h */,
 				DA859D891E654865005603ED /* YdListTableViewCell.m */,
+				DA6E6DB11E6FBBF000372909 /* YdMenu.h */,
+				DA6E6DB21E6FBBF000372909 /* YdMenu.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -789,7 +806,7 @@
 		DA859DE71E654A21005603ED /* me */ = {
 			isa = PBXGroup;
 			children = (
-				DAA414941E6E5A89004FB7E1 /* yd_add@2x.png */,
+				DA6E6DA71E6FB1DD00372909 /* yd_add@2x.png */,
 				DA6B76C01E67BD15009DF778 /* Ydlvshi@2x.png */,
 				DA6B76BB1E67B493009DF778 /* Ydtouxiang@2x.png */,
 				DA7725411E66648E00531696 /* ydclose.png */,
@@ -808,6 +825,7 @@
 		DA859DF41E654A2F005603ED /* home */ = {
 			isa = PBXGroup;
 			children = (
+				DA6E6DA31E6FA72B00372909 /* yd_down@2x.png */,
 				DA859DF51E654A42005603ED /* indexIcon_1@2x.png */,
 				DA859DF61E654A42005603ED /* indexIcon_2@2x.png */,
 				DA859DF71E654A42005603ED /* indexIcon_3@2x.png */,
@@ -953,7 +971,6 @@
 			files = (
 				DA859DFE1E654A42005603ED /* indexIcon_1@2x.png in Resources */,
 				DA77256A1E66CB9600531696 /* YdyanjingH@2x.png in Resources */,
-				DAA414951E6E5A89004FB7E1 /* yd_add@2x.png in Resources */,
 				DA859DE61E654A19005603ED /* loginBgImg.jpg in Resources */,
 				DA859E1C1E654A67005603ED /* btnIcon_5@2x.png in Resources */,
 				DA859DF21E654A2C005603ED /* renzheng@2x.png in Resources */,
@@ -974,6 +991,8 @@
 				DA859DE41E654A19005603ED /* ad_3.jpg in Resources */,
 				DA859DF01E654A2C005603ED /* guanyu@2x.png in Resources */,
 				DA859E001E654A42005603ED /* indexIcon_3@2x.png in Resources */,
+				DA6E6DA41E6FA72B00372909 /* yd_down@2x.png in Resources */,
+				DA6E6DA81E6FB1DD00372909 /* yd_add@2x.png in Resources */,
 				DA859E021E654A42005603ED /* indexIcon_5@2x.png in Resources */,
 				DA859E131E654A67005603ED /* ydback@2x.png in Resources */,
 				DA859E1B1E654A67005603ED /* btnIcon_4@3x.png in Resources */,
@@ -1070,6 +1089,7 @@
 				DA859DD01E654865005603ED /* YdRegisteredViewController.m in Sources */,
 				DA859DCF1E654865005603ED /* YdLodinViewController.m in Sources */,
 				DA859DC81E654865005603ED /* YdConsultingTableViewCell.m in Sources */,
+				DA6E6DB61E6FE77800372909 /* YdSearchViewController.m in Sources */,
 				DA236F3B1E6962FD00058D7F /* YdLaCertificateViewController.m in Sources */,
 				DA77255D1E6665B600531696 /* XCTableView.m in Sources */,
 				DAA414981E6E6909004FB7E1 /* YdCity.m in Sources */,
@@ -1083,6 +1103,7 @@
 				DA859D051E65477D005603ED /* YdMianViewController.m in Sources */,
 				DA859C6B1E653FD4005603ED /* main.m in Sources */,
 				DA859DCA1E654865005603ED /* YdHomeViewController.m in Sources */,
+				DA6E6DB91E6FF6EF00372909 /* YdBanner.m in Sources */,
 				DA859DA21E654865005603ED /* YdAssistViewController.m in Sources */,
 				DA859DD41E654865005603ED /* YdFeedbackViewController.m in Sources */,
 				DA859DD11E654865005603ED /* YdAboutmeViewController.m in Sources */,
@@ -1103,6 +1124,7 @@
 				DA6B76BF1E67B626009DF778 /* YdUserInfoModel.m in Sources */,
 				DA859DCD1E654865005603ED /* YdHomeTableViewCell.m in Sources */,
 				DA859DD31E654865005603ED /* YdchangepwViewController.m in Sources */,
+				DA6E6DB31E6FBBF000372909 /* YdMenu.m in Sources */,
 				DA7725601E666CCE00531696 /* UIScrollView+EmptyDataSet.m in Sources */,
 				DA859DC91E654865005603ED /* YdForumViewController.m in Sources */,
 			);

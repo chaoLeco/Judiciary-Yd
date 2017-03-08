@@ -22,6 +22,10 @@
 @property (nonatomic, retain) NSString <Optional>*lawyer_state;
 @property (nonatomic, retain) NSString <Optional>*lawyer_praise;
 @property (nonatomic, retain) NSString <Optional>*lawyer_comment;
+@property (nonatomic, retain) NSString <Optional>*lawyer_wx;
+@property (nonatomic, retain) NSString <Optional>*lawyer_qq;
+@property (nonatomic, retain) NSString <Optional>*lawyer_phone;
+@property (nonatomic, retain) NSString <Optional>*lawyer_headerimage;
 @end
 //"data": [
 //{

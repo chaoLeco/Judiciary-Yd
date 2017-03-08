@@ -64,6 +64,10 @@
 
 #pragma mark - Action -
 
+- (IBAction)popAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)chooseAction:(UIButton *)sender {
     [self .view endEditing:YES];
     if (sender.tag ==11) {
@@ -277,7 +281,7 @@
     if (_pn>0) {
         YdCity *pp = _provinces[_pn-1];
         if (_cn>0) {
-            if (_cn!=9999) {
+            if (_cn==9999) {
                 return [NSString stringWithFormat:@"%@-%@",pp._id,pp._id];
             }else{
                YdCity *cc = _citys[_cn-1];

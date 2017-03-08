@@ -19,7 +19,9 @@
     // Do any additional setup after loading the view.
     [self webLoadRequestUrl:@"https://www.baidu.com"];
     self.wkWebView.frame = CGRectMake(0, 64, CGRectGetWidth(KBounds), CGRectGetHeight(KBounds)-40);
-    
+    if (_lawyerInfo) {
+        self.title = _lawyerInfo.lawyer_username;
+    }
     
 }
 
@@ -51,14 +53,15 @@ targetId:Yd_RCIM_ID];
     [self.navigationController pushViewController:chat animated:YES];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
 }
-*/
+
 
 @end

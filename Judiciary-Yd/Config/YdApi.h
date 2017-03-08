@@ -344,6 +344,33 @@
 
 #define Yd_url_updateNews Yd_url_sifanvsheng@"Home/News/updateNews"
 
+//6、首页头部新闻列表查询接口
+//接口地址：sifanvshen/index.php/Home/News/getNewsListByType
+//
+//接口示例：http://59.110.166.204/sifanvshen/index.php/Home/News/getNewsListByType?newtype=1&keyword=不知道&rownum=10&page=1
+//
+//提交数据： newtype-新闻类型（1：法律条文（搜索里面的法律法规） 2：司法解释 3：司法案例（搜索里面的法律案例） 4：法律文献 5：法律流程（搜做里面的法律流程）） keyword-搜索关键字 rownum-每页条数 page-当前页数
+//
+//提交类型：POST、GET
+//返回数据：flag=0:失败 flag=1:成功
+//{
+//    "flag": "1",
+//    "message": "查询成功",
+//    "sumnum": "1",
+//    "data": [
+//    {
+//        "news_id": "8",
+//        "news_title": "生孩子怎么处理不知道",
+//        "news_content": "拉克丝打飞机看来就是地方了看见爱上对方立刻就阿萨德六块腹肌熬枯受淡放",
+//        "news_time": "2017-03-08 10:48:56",
+//        "news_type": "1",
+//        "news_listimage": "./uploads/newsimage/20170308/58bf71189994c.jpg",
+//        "news_smalllistimage": "./uploads/newsimage/20170308/thumb_58bf71189994c.jpg"
+//    } 
+//             ] 
+//}
+#define Yd_url_getNewsListByType Yd_url_sifanvsheng@"Home/News/getNewsListByType"
+
 #pragma mark - 法律援助在线申请  -
 
 //1、新增法律援助申请
@@ -544,3 +571,73 @@
 //    } 
 //}
 #define Yd_url_getLawyerDetail Yd_url_sifanvsheng@"Home/Lawyer/getAssistanceList"
+
+
+//6、首页优秀律师列表
+//接口地址：sifanvshen/index.php/Home/Lawyer/getExcellentAssistanceList
+//
+//接口示例：http://localhost/sifanvshen/index.php/Home/Lawyer/getExcellentAssistanceList=
+//
+//提交数据：
+//
+//提交类型：POST、GET
+//
+//返回数据：flag=0:失败 flag=1:成功
+//{"flag":"1","message":"修改成功"}
+//{
+//    "flag": "1",
+//    "message": "查询成功",
+//    "sumnum": "5",
+//    "data": [
+//    {
+//        "lawyer_id": "1",
+//        "lawyer_userid": "1",
+//        "lawyer_address": "2200-2201",
+//        "lawyer_username": "老狼",
+//        "lawyer_company": "北京律师事务所",
+//        "lawyer_lowyercode": "12345678901234",
+//        "lawyer_inimage": "/uploads/lawyerimage/20170302/58b7e8f6926fe.jpg",
+//        "lawyer_yearimage": "/uploads/lawyerimage/20170302/58b7e8f694062.png",
+//        "lawyer_abstract": "我是个律师啊",
+//        "lawyer_wx": "myweixin",
+//        "lawyer_qq": "547201260",
+//        "lawyer_phone": "15210181617",
+//        "lawyer_state": "1",
+//        "lawyer_praise": "1", 
+//        "lawyer_comment": "0", 
+//        "lawyer_addresstext": "", 
+//        "lawyer_isrecommend": "1" 
+//    } 
+//             ] 
+//}
+
+#define Yd_url_getExcellentAssistanceList Yd_url_sifanvsheng@"Home/Lawyer/getExcellentAssistanceList"
+
+#pragma mark - banner  -
+
+//2、banner列表查询 - 首页
+//接口地址：sifanvshen/index.php/Home/Lawyer/Banner/getBannerList
+//
+//接口示例：http://localhost/sifanvshen/index.php/Home/Lawyer/Banner/getBannerList
+//
+//提交数据：
+//
+//提交类型：POST、GET
+//
+//返回数据：flag=0:失败 flag=1:成功 banner_newsid-图片对应新闻id
+//{
+//    "flag": "1",
+//    "message": "查询成功",
+//    "data": [
+//    {
+//        "banner_id": "4",
+//        "banner_imagelink": "/uploads/newsimage/20170308/58bf855ed5b7d.png",
+//        "banner_newsid": "5",
+//        "banner_showflag": "1",
+//        "banner_time": "2017-03-08 12:15:38" 
+//    } 
+//             ] 
+//}
+
+#define Yd_url_getBannerList Yd_url_sifanvsheng@"Home/Banner/getBannerList"
+

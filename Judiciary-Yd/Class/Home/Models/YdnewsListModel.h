@@ -15,6 +15,7 @@
 @property (nonatomic, retain) NSString <Optional>*news_time;
 @property (nonatomic, retain) NSString <Optional>*news_type;
 @property (nonatomic, retain) NSString <Optional>*news_listimage;
+@property (nonatomic, retain) NSString <Optional>*news_smalllistimage;
 
 @end
 //"news_id": "4",

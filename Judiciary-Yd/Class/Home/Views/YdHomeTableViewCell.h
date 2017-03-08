@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "SDCycleScrollView.h"
+#import "YdAssistanceModel.h"
 
 @interface YdHomeTableViewCell : UITableViewCell<SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
-
 @property (strong,nonatomic) SDCycleScrollView *cycleScrollView;
+
+typedef void(^cellBlock)(NSInteger nn);
+@property (strong,nonatomic) cellBlock clickblock;
+
+-(void)setValue:(NSArray *)datas;
 @end

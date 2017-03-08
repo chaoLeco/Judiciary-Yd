@@ -2,6 +2,7 @@
 platform:ios,'8.0'
 
 target 'Judiciary-Yd' do
+pod 'DXPopover', '~> 0.1.1'
 pod 'JSONModel', '~> 1.7.0'
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'MJRefresh', '~> 3.1.12'

@@ -24,11 +24,24 @@
 - (SDCycleScrollView *)cycleScrollView
 {
     if (!_cycleScrollView) {
-        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGRectGetWidth(KBounds), CGRectGetHeight(_bannerView.bounds)) delegate:self placeholderImage:nil];
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, CGRectGetWidth(KBounds), CGRectGetHeight(_bannerView.bounds)) delegate:self placeholderImage:[UIImage imageNamed:@"Yzwt22.png"]];
         _cycleScrollView.hidesForSinglePage = YES;
-        [_bannerView addSubview:_cycleScrollView];
+        _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
     }
     return _cycleScrollView;
+}
+
+-(void)setValue:(NSArray *)datas
+{
+     [_bannerView addSubview:self.cycleScrollView];
+    NSMutableArray *imgs = [NSMutableArray array];
+    NSMutableArray *titles = [NSMutableArray array];
+    for (YdAssistanceModel *model in datas) {
+        [imgs addObject:[NSString stringWithFormat:@"%@%@",Yd_imgUrl_basis,model.lawyer_headerimage]];
+        [titles addObject:[NSString stringWithFormat:@"%@-%@",model.lawyer_username,model.lawyer_company]];
+    }
+    _cycleScrollView.imageURLStringsGroup = imgs.copy;
+    _cycleScrollView.titlesGroup = titles.copy;
 }
 
 #pragma mark - SDCycleScrollViewDelegate -
@@ -36,6 +49,9 @@
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
 //    NSLog(@"点击了第%ld个",index);
+    if (_clickblock) {
+        _clickblock(index);
+    }
 }
 
 /** 图片滚动回调 */

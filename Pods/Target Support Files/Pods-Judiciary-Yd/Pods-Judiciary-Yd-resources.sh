@@ -77,6 +77,7 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "$PODS_CONFIGURATION_BUILD_DIR/DXPopover/DXPopover.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "RongCloudIM/RongCloudIM/RongCloud.bundle"
   install_resource "RongCloudIM/RongCloudIM/en.lproj"
@@ -85,6 +86,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "RongCloudIM/RongCloudIM/RCConfig.plist"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "$PODS_CONFIGURATION_BUILD_DIR/DXPopover/DXPopover.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "RongCloudIM/RongCloudIM/RongCloud.bundle"
   install_resource "RongCloudIM/RongCloudIM/en.lproj"
