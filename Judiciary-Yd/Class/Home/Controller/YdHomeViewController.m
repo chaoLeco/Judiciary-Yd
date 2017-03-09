@@ -34,8 +34,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self getBannerData];
+    
     [_banner addSubview:self.cycleScrollView];
+    [self tableRefresh:_tableView];
     [self getDataSource];
 }
 
@@ -80,8 +81,8 @@
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
 //    NSLog(@"点击了第%ld个",index);
-    YdnewsListModel *model = _dataSource[index];
-    [self performSegueWithIdentifier:@"pushYdwebViewControllerSegue" sender:model.news_title];
+//    YdBanner *model = _dataBanners[index];
+    [self performSegueWithIdentifier:@"pushYdwebViewControllerSegue" sender:@"banner"];
 }
 
 /** 图片滚动回调 */
@@ -92,6 +93,12 @@
 
 #pragma mark - Data -
 
+
+- (void)getDataSource
+{
+    [self getBannerData];
+    [self getAssistanceList];
+}
 - (void)getBannerData
 {
     [XCNetworking XC_GET_JSONDataWithUrl:Yd_url_getBannerList Params:nil success:^(id json) {
@@ -114,7 +121,7 @@
     }];
 }
 
-- (void)getDataSource
+- (void)getAssistanceList
 {
     [XCNetworking XC_GET_JSONDataWithUrl:Yd_url_getExcellentAssistanceList Params:nil success:^(id json) {
         if ([self isFlag:json]) {

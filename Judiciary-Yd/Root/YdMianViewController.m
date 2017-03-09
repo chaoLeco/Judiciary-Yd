@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [kNotificationCenter addObserver:self selector:@selector(selectedIndex:) name:Yd_Tabbar_selectedIndex object:nil];
+    [self.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
+
 }
 
 - (void)didReceiveMemoryWarning {

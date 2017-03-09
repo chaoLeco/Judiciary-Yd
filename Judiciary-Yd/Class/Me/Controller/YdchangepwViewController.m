@@ -55,7 +55,7 @@
         [self showHUDWithHint:nil];
         NSString *phone = k_GET_OBJECT(Yd_user_phone);
         
-        NSDictionary *dic = @{@"userphone":@"13162839599",
+        NSDictionary *dic = @{@"userphone":phone,
                               @"vercode":_txtcode.text,
                               @"userpassword":_pwagain.text};
         [XCNetworking XC_GET_JSONDataWithUrl:Yd_url_resetPassword Params:dic success:^(id json) {

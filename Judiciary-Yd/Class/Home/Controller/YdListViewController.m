@@ -81,13 +81,17 @@
 - (void)getDataSource
 {
     if (_newstype) {
+        self.totalPage =1;
         NSDictionary *dic = @{@"newtype":_newstype,@"rownum":@"10",@"page":[NSString stringWithFormat:@"%ld",(long)self.nowPage]};
         [XCNetworking XC_GET_JSONDataWithUrl:Yd_url_getNewsList Params:dic success:^(id json) {
             if ([self isFlag:json]) {
                 if (self.nowPage ==1) {
                     _dataSource = [NSMutableArray array];
                 }
-                self.totalPage = [json[@"sumnum"] integerValue];
+                NSInteger sum = [json[@"sumnum"] integerValue];
+                if (sum>=10) {
+                    self.totalPage ++;
+                }
                 NSArray *data = json[@"data"];
                 for (NSDictionary *dic in data) {
                     NSError *error;
