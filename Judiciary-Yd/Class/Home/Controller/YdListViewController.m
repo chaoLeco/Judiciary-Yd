@@ -69,7 +69,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     YdnewsListModel *model = _dataSource[indexPath.row];
-    [self performSegueWithIdentifier:@"pushYdwebViewControllerSegue" sender:model.news_title];
+    [self performSegueWithIdentifier:@"pushYdwebViewControllerSegue" sender:model.news_id];
 }
 
 - (IBAction)goback:(UIButton *)sender {
@@ -122,7 +122,7 @@
     UIViewController *vc = [segue destinationViewController];
     if ([vc isKindOfClass:[YdwebViewController class]]) {
         YdwebViewController *ydweb = (YdwebViewController *)vc;
-        ydweb.title = sender;
+        ydweb.newid = sender;
     }
 }
 

@@ -9,6 +9,7 @@
 #import "YdAboutmeViewController.h"
 
 @interface YdAboutmeViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lbltxt;
 
 @end
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self getDataSource];
 }
 
 - (IBAction)gobackAction:(id)sender {
@@ -26,6 +27,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)getDataSource
+{
+    [XCNetworking XC_GET_JSONDataWithUrl:Yd_url_getAboutus Params:nil success:^(id json) {
+        if ([self isFlag:json]) {
+           
+            _lbltxt.text = json[@"data"][@"aboutus_content"];
+        }
+    } fail:^(NSError *error) {
+        [self showHint:@"网络错误获取失败"];
+    }];
 }
 
 /*

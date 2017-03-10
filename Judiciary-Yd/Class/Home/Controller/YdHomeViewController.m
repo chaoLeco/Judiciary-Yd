@@ -81,8 +81,8 @@
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
 //    NSLog(@"点击了第%ld个",index);
-//    YdBanner *model = _dataBanners[index];
-    [self performSegueWithIdentifier:@"pushYdwebViewControllerSegue" sender:@"banner"];
+    YdBanner *model = _dataBanners[index];
+    [self performSegueWithIdentifier:@"pushYdwebViewControllerSegue" sender:model.banner_newsid];
 }
 
 /** 图片滚动回调 */
@@ -238,7 +238,7 @@
     }
     if ([vc isKindOfClass:[YdwebViewController class]]) {
         YdwebViewController *ydweb = (YdwebViewController *)vc;
-        ydweb.title = sender;
+        ydweb.newid = sender;
     }
     
 }

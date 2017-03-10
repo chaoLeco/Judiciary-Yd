@@ -641,3 +641,24 @@
 
 #define Yd_url_getBannerList Yd_url_sifanvsheng@"Home/Banner/getBannerList"
 
+
+//2、获取关于我们
+//接口地址：sifanvshen/index.php/Home/Lawyer/About/getAboutus
+//
+//接口示例：http://localhost/sifanvshen/index.php/Home/About/getAboutus
+//
+//提交数据：
+//
+//提交类型：POST、GET
+//
+//返回数据：flag=0:失败 flag=1:成功
+//{
+//    "flag": "1",
+//    "message": "查询成功",
+//    "data": {
+//        "aboutus_id": "1",
+//        "aboutus_content": "我们是一家非常专业的律师咨询机构。",
+//        "aboutus_time": "2017-03-10 10:57:32"
+//    } 
+//}
+#define Yd_url_getAboutus Yd_url_sifanvsheng@"Home/About/getAboutus"

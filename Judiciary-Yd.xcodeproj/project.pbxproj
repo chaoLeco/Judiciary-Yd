@@ -22,6 +22,14 @@
 		DA6E6DB31E6FBBF000372909 /* YdMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E6DB21E6FBBF000372909 /* YdMenu.m */; };
 		DA6E6DB61E6FE77800372909 /* YdSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E6DB51E6FE77800372909 /* YdSearchViewController.m */; };
 		DA6E6DB91E6FF6EF00372909 /* YdBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = DA6E6DB81E6FF6EF00372909 /* YdBanner.m */; };
+		DA73A5491E7296A700401025 /* .project in Resources */ = {isa = PBXBuildFile; fileRef = DA73A53D1E7296A700401025 /* .project */; };
+		DA73A54A1E7296A700401025 /* detailNews.css in Resources */ = {isa = PBXBuildFile; fileRef = DA73A53F1E7296A700401025 /* detailNews.css */; };
+		DA73A54B1E7296A700401025 /* MainStyle.css in Resources */ = {isa = PBXBuildFile; fileRef = DA73A5401E7296A700401025 /* MainStyle.css */; };
+		DA73A54C1E7296A700401025 /* mui.min.css in Resources */ = {isa = PBXBuildFile; fileRef = DA73A5411E7296A700401025 /* mui.min.css */; };
+		DA73A54D1E7296A700401025 /* detailNews.html in Resources */ = {isa = PBXBuildFile; fileRef = DA73A5431E7296A700401025 /* detailNews.html */; };
+		DA73A54E1E7296A700401025 /* config.js in Resources */ = {isa = PBXBuildFile; fileRef = DA73A5461E7296A700401025 /* config.js */; };
+		DA73A54F1E7296A700401025 /* detailNews.js in Resources */ = {isa = PBXBuildFile; fileRef = DA73A5471E7296A700401025 /* detailNews.js */; };
+		DA73A5501E7296A700401025 /* jquery-2.1.0.js in Resources */ = {isa = PBXBuildFile; fileRef = DA73A5481E7296A700401025 /* jquery-2.1.0.js */; };
 		DA7725421E66648E00531696 /* ydclose.png in Resources */ = {isa = PBXBuildFile; fileRef = DA7725411E66648E00531696 /* ydclose.png */; };
 		DA7725561E6665B600531696 /* NSObject+WGObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DA7725461E6665B600531696 /* NSObject+WGObject.m */; };
 		DA7725581E6665B600531696 /* NSString+WGString.m in Sources */ = {isa = PBXBuildFile; fileRef = DA77254A1E6665B600531696 /* NSString+WGString.m */; };
@@ -165,6 +173,14 @@
 		DA6E6DB51E6FE77800372909 /* YdSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdSearchViewController.m; sourceTree = "<group>"; };
 		DA6E6DB71E6FF6EF00372909 /* YdBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YdBanner.h; sourceTree = "<group>"; };
 		DA6E6DB81E6FF6EF00372909 /* YdBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YdBanner.m; sourceTree = "<group>"; };
+		DA73A53D1E7296A700401025 /* .project */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = .project; sourceTree = "<group>"; };
+		DA73A53F1E7296A700401025 /* detailNews.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = detailNews.css; sourceTree = "<group>"; };
+		DA73A5401E7296A700401025 /* MainStyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = MainStyle.css; sourceTree = "<group>"; };
+		DA73A5411E7296A700401025 /* mui.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = mui.min.css; sourceTree = "<group>"; };
+		DA73A5431E7296A700401025 /* detailNews.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = detailNews.html; sourceTree = "<group>"; };
+		DA73A5461E7296A700401025 /* config.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = config.js; sourceTree = "<group>"; };
+		DA73A5471E7296A700401025 /* detailNews.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = detailNews.js; sourceTree = "<group>"; };
+		DA73A5481E7296A700401025 /* jquery-2.1.0.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.0.js"; sourceTree = "<group>"; };
 		DA7725411E66648E00531696 /* ydclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ydclose.png; sourceTree = "<group>"; };
 		DA7725451E6665B600531696 /* NSObject+WGObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WGObject.h"; sourceTree = "<group>"; };
 		DA7725461E6665B600531696 /* NSObject+WGObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WGObject.m"; sourceTree = "<group>"; };
@@ -411,6 +427,53 @@
 				8589E32CCDAB7EA9FA7310A1 /* Pods-Judiciary-Yd.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA73A53C1E7296A700401025 /* SiFaNvShenH5 */ = {
+			isa = PBXGroup;
+			children = (
+				DA73A53D1E7296A700401025 /* .project */,
+				DA73A53E1E7296A700401025 /* css */,
+				DA73A5421E7296A700401025 /* html */,
+				DA73A5441E7296A700401025 /* img */,
+				DA73A5451E7296A700401025 /* js */,
+			);
+			path = SiFaNvShenH5;
+			sourceTree = "<group>";
+		};
+		DA73A53E1E7296A700401025 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				DA73A53F1E7296A700401025 /* detailNews.css */,
+				DA73A5401E7296A700401025 /* MainStyle.css */,
+				DA73A5411E7296A700401025 /* mui.min.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		DA73A5421E7296A700401025 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				DA73A5431E7296A700401025 /* detailNews.html */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		DA73A5441E7296A700401025 /* img */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		DA73A5451E7296A700401025 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				DA73A5461E7296A700401025 /* config.js */,
+				DA73A5471E7296A700401025 /* detailNews.js */,
+				DA73A5481E7296A700401025 /* jquery-2.1.0.js */,
+			);
+			path = js;
 			sourceTree = "<group>";
 		};
 		DA859C5D1E653FD4005603ED = {
@@ -784,6 +847,7 @@
 		DA859DD91E6549E5005603ED /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				DA73A53C1E7296A700401025 /* SiFaNvShenH5 */,
 				DA859C751E653FD4005603ED /* Assets.xcassets */,
 				DA236F351E69593400058D7F /* Ydzwt11.png */,
 				DA236F361E69593400058D7F /* Yzwt22.png */,
@@ -932,7 +996,7 @@
 				TargetAttributes = {
 					DA859C651E653FD4005603ED = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4TNUKKVG8N;
+						DevelopmentTeam = K7HU34LWAQ;
 						ProvisioningStyle = Automatic;
 					};
 					DA859C7E1E653FD4005603ED = {
@@ -983,6 +1047,8 @@
 				DA859E181E654A67005603ED /* btnIcon_3@2x.png in Resources */,
 				DA859DE31E654A19005603ED /* ad_2.jpg in Resources */,
 				DA859DE21E654A19005603ED /* ad_1.jpg in Resources */,
+				DA73A54A1E7296A700401025 /* detailNews.css in Resources */,
+				DA73A5501E7296A700401025 /* jquery-2.1.0.js in Resources */,
 				DA859C761E653FD4005603ED /* Assets.xcassets in Resources */,
 				DA859E051E654A42005603ED /* indexIcon_8@2x.png in Resources */,
 				DA859E061E654A42005603ED /* indexIcon_9@2x.png in Resources */,
@@ -1000,21 +1066,27 @@
 				DA6E6DA81E6FB1DD00372909 /* yd_add@2x.png in Resources */,
 				DA859E021E654A42005603ED /* indexIcon_5@2x.png in Resources */,
 				DA859E131E654A67005603ED /* ydback@2x.png in Resources */,
+				DA73A54B1E7296A700401025 /* MainStyle.css in Resources */,
 				DA859E1B1E654A67005603ED /* btnIcon_4@3x.png in Resources */,
 				DA859E041E654A42005603ED /* indexIcon_7@2x.png in Resources */,
 				DA236F371E69593400058D7F /* Ydzwt11.png in Resources */,
+				DA73A54C1E7296A700401025 /* mui.min.css in Resources */,
 				DA859E191E654A67005603ED /* btnIcon_3@3x.png in Resources */,
 				DA6B76BC1E67B493009DF778 /* Ydtouxiang@2x.png in Resources */,
 				DA859DEF1E654A2C005603ED /* fankui@2x.png in Resources */,
 				DA859DF31E654A2C005603ED /* shezhi@2x.png in Resources */,
 				DA859DFF1E654A42005603ED /* indexIcon_2@2x.png in Resources */,
 				DA859E151E654A67005603ED /* btnIcon_1@3x.png in Resources */,
+				DA73A54E1E7296A700401025 /* config.js in Resources */,
+				DA73A54D1E7296A700401025 /* detailNews.html in Resources */,
 				DA859DE11E654A19005603ED /* QQ20170221-161723.png in Resources */,
 				DA859DF11E654A2C005603ED /* qianbao@2x.png in Resources */,
 				DA859E1D1E654A67005603ED /* btnIcon_5@3x.png in Resources */,
+				DA73A54F1E7296A700401025 /* detailNews.js in Resources */,
 				DA7725691E66CB9600531696 /* Ydyanjing@2x.png in Resources */,
 				DA236F381E69593400058D7F /* Yzwt22.png in Resources */,
 				DA859C741E653FD4005603ED /* Main.storyboard in Resources */,
+				DA73A5491E7296A700401025 /* .project in Resources */,
 				DA859E141E654A67005603ED /* btnIcon_1@2x.png in Resources */,
 				DA6B76C11E67BD15009DF778 /* Ydlvshi@2x.png in Resources */,
 				DA859DE51E654A19005603ED /* ad_4.jpg in Resources */,
@@ -1282,7 +1354,7 @@
 			baseConfigurationReference = CA774EDDDB492D4541D564F0 /* Pods-Judiciary-Yd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4TNUKKVG8N;
+				DEVELOPMENT_TEAM = K7HU34LWAQ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Judiciary-Yd/Config/YdHeader.h";
 				INFOPLIST_FILE = "Judiciary-Yd/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1298,7 +1370,7 @@
 			baseConfigurationReference = 8589E32CCDAB7EA9FA7310A1 /* Pods-Judiciary-Yd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4TNUKKVG8N;
+				DEVELOPMENT_TEAM = K7HU34LWAQ;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Judiciary-Yd/Config/YdHeader.h";
 				INFOPLIST_FILE = "Judiciary-Yd/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -14,9 +14,11 @@
 @property (assign,nonatomic) NSInteger totalPage;
 
 @property(nonatomic ,strong) WKWebView *wkWebView;
-
+@property(nonatomic ,strong) NSString *_id;
 //webview 加载
 - (void)webLoadRequestUrl:(NSString *)url;
+//加载本地web
+- (void)webLoadName:(NSString *)fileName;
 
 - (BOOL)isFlag:(id)json;
 

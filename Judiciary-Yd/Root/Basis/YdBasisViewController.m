@@ -8,7 +8,7 @@
 
 #import "YdBasisViewController.h"
 
-@interface YdBasisViewController ()<WKUIDelegate>
+@interface YdBasisViewController ()<WKUIDelegate,WKNavigationDelegate>
 
 @end
 
@@ -25,6 +25,7 @@
         _wkWebView = [[WKWebView alloc]initWithFrame:self.view.bounds];
         _wkWebView.allowsBackForwardNavigationGestures = YES;
         _wkWebView.UIDelegate = self;
+        _wkWebView.navigationDelegate = self;
         [self.view addSubview:_wkWebView];
         [self.view sendSubviewToBack:_wkWebView];
     }
@@ -36,6 +37,12 @@
     [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
 }
 
+- (void)webLoadName:(NSString *)fileName
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"html"];
+    NSURL *fileURL = [NSURL fileURLWithPath:path];
+    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:fileURL]];
+}
 
 - (BOOL)isFlag:(id)json
 {
@@ -120,20 +127,34 @@
 // 调用JS的alert()方法
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler
 {
-    
+    NSLog(@"____%@",message);
+//    completionHandler();
 }
 
 // 调用JS的confirm()方法
 
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL result))completionHandler
 {
-    
+    NSLog(@"confirm____%@",message);
 }
 
 // 调用JS的prompt()方法
 - (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * _Nullable result))completionHandler
 {
     
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(null_unspecified WKNavigation *)navigation
+{
+    NSLog(@"Finish");
+    NSString *js = [NSString stringWithFormat:@"getNewsId(%@)",self._id];
+    [webView evaluateJavaScript:js completionHandler:nil];
+}
+
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error
+{
+    NSLog(@"Fail");
 }
 /*
 #pragma mark - Navigation

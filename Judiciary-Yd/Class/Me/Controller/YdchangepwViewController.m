@@ -9,13 +9,15 @@
 #import "YdchangepwViewController.h"
 
 @interface YdchangepwViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *pwold;
+
 @property (weak, nonatomic) IBOutlet UITextField *pwnew;
 @property (weak, nonatomic) IBOutlet UITextField *pwagain;
 @property (weak, nonatomic) IBOutlet UITextField *txtcode;
 @property (weak, nonatomic) IBOutlet UIButton *codeBtn;
 @property (weak, nonatomic) IBOutlet UILabel *codeTime;
 
+@property (assign, nonatomic) NSInteger tt;
+@property (strong, nonatomic) NSTimer *timer;
 @end
 
 @implementation YdchangepwViewController
@@ -31,11 +33,35 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)getcodeAction:(id)sender {
+    [self.view endEditing:YES];
+    NSString *phone = k_GET_OBJECT(Yd_user_phone);
+    if (phone) {
+        //请求短信验证码
+        _codeBtn.hidden = YES;
+        _codeTime.hidden = NO;
+        _tt = 60;
+        if (!_timer) {
+            _timer = [NSTimer initWithTimeInterval:1 target:self selector:@selector(deal) userInfo:nil repeats:YES];
+        }
+        [_timer resume];
+        
+    }else
+        [self notLogin];
+}
+
+- (void)deal
+{
+    _codeTime.text = [NSString stringWithFormat:@"%lds",(long)--_tt];
+    if (_tt<1) {
+        [_timer stop];
+        _codeBtn.hidden = NO;
+        _codeTime.hidden = YES;
+    }
+}
+
 - (IBAction)changeVisible:(UIButton *)sender {
     switch (sender.tag) {
-        case 100:
-            _pwold.secureTextEntry = sender.selected;
-            break;
         case 200:
             _pwnew.secureTextEntry = sender.selected;
             break;
@@ -75,16 +101,11 @@
 - (BOOL)isvalue
 {
     if (_txtcode.text.length==6) {
-        if ([_pwold.text isMatchingRegularEpressionByPattern:RE_SecretLeast(6, 15)]) {
-            if ([_pwnew.text isMatchingRegularEpressionByPattern:RE_SecretLeast(6, 15)]) {
-                if ([_pwnew.text isEqualToString:_pwagain.text]) {
-                    return YES;
-                }else{
-                    [self showHint:@"两次密码输入不一致"];
-                    return NO;
-                }
+        if ([_pwnew.text isMatchingRegularEpressionByPattern:RE_SecretLeast(6, 15)]) {
+            if ([_pwnew.text isEqualToString:_pwagain.text]) {
+                return YES;
             }else{
-                [self showHint:@"请输入6~15位密码"];
+                [self showHint:@"两次密码输入不一致"];
                 return NO;
             }
         }else{

@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self webLoadRequestUrl:@"https://www.baidu.com"];
+    self._id = _newid;
+    [self webLoadName:@"detailNews"];
+    self.title = @"详情";
+//    [self webLoadRequestUrl:@"http://baidu.com"];
 }
 
 - (IBAction)goback:(UIButton *)sender {

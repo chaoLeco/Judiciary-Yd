@@ -1,0 +1,48 @@
+.mui-bar{
+    background-color: #9f0203;
+}
+.mui-search .mui-placeholder{
+	/*background-color: white;*/
+}
+.index-headerLogo{
+	width: 3rem;
+	height: 44px;
+	background-color: salmon;
+	 display: inline-block;
+	 position: absolute;
+}
+.mui-action-back{
+	color: white;
+}
+.mui-title{
+	color: white;
+}
+.mui-bar{
+	/*z-index: -1;*/
+}
+.mui-bar-tab .mui-tab-item.mui-active {
+    color: white;
+}
+.mui-bar-tab .mui-tab-item {
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #c2c2c4;
+}
+.barTab img{
+	width: 1.2rem;
+	margin-top: 0.3rem;
+	margin-bottom: -0.3rem;
+	
+}
+.mui-tab-label{
+	font-size: 0.8rem;
+}
+.mui-active{
+	background-color: #bf393a;
+}

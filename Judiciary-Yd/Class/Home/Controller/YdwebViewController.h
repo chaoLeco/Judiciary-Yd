@@ -9,5 +9,5 @@
 #import "YdBasisViewController.h"
 
 @interface YdwebViewController : YdBasisViewController
-
+@property(strong,nonatomic) NSString *newid;
 @end

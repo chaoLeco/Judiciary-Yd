@@ -1,0 +1,19 @@
+.newsTitle{
+	width: 100%;
+	padding: 10px 8px;
+	text-align: center;
+}
+.newsTime{
+	text-align: center;
+	padding: 3px;
+	background-color: #CCCCCC;
+	font-size: 0.8rem;
+	color: #777777;
+}
+.newsCont{
+	padding: 5px;
+	font-size: 0.9rem;
+}
+.mui-scroll-wrapper{
+	margin-top: 45px;
+}
