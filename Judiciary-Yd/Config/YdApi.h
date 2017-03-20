@@ -13,14 +13,15 @@
 #endif /* YdApi_h */
 
 
-//#define Yd_RCIM_APPKEY @"m7ua80gbmy02m" //develop key
+#define Yd_RCIM_APPKEY @"m7ua80gbmy02m" //develop key
 //#define Yd_RCIM_APPKEY @"m7ua80gbmy02m" //production key
-#define Yd_RCIM_APPKEY @"n19jmcy59f1q9" //不知咱的 key
+//#define Yd_RCIM_APPKEY @"n19jmcy59f1q9" //不知咱的 key
 
 #define Yd_RCIM_TOKEN @"RwwgHQRgvUiOVCngXMoEM6+YsUIoF3ojin3K277sfOnuhl89uRMYPRVSVLV/ftdVSxnRWBWZ2zdLM1cqohnLnatdpZUyLdaH" //token
 #define Yd_RCIM_ID @"Ed1fnUzBZ" //ID
 
 #pragma mark - key 键值 -
+#define Yd_userRc_token @"com.Yd.userRongCloudToken"
 #define Yd_user_token @"com.Yd.userToken"
 #define Yd_user_id @"com.Yd.userId"
 #define Yd_user_phone @"com.Yd.userphone"
@@ -662,3 +663,21 @@
 //    } 
 //}
 #define Yd_url_getAboutus Yd_url_sifanvsheng@"Home/About/getAboutus"
+
+
+//七、用户聊天
+//appKey: m7ua80gbmy02m
+//
+//1、获取token
+//接口地址：sifanvshen/index.php/Home/Userchat/getToken
+//
+//接口示例：http://localhost/sifanvshen/index.php/Home/Userchat/getToken?userid=1
+//
+//提交数据：
+//
+//提交类型：POST、GET
+//
+//返回数据：code=200:成功 code=其他失败
+//{"code":200,"userId":"1","token":"nuv56g3r4jkLJht5btJQ1CjkPJDahLtLL5VknwRTztjLVWcOSwMkYYtUfsS9Kg+gh9E+
+
+#define Yd_url_getToken Yd_url_sifanvsheng@"Home/Userchat/getToken"

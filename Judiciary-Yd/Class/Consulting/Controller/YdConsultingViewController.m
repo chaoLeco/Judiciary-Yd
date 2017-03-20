@@ -46,7 +46,7 @@
                 }
             }
             [_tableView reloadData];
-        }
+        }else[self showHint:@"没有了"];
         [_tableView.mj_header endRefreshing];
         [_tableView.mj_header endRefreshing];
     } fail:^(NSError *error) {

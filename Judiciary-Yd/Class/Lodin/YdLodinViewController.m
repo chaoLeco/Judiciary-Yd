@@ -7,6 +7,7 @@
 //
 
 #import "YdLodinViewController.h"
+#import "YdLodinTools.h"
 
 @interface YdLodinViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
@@ -51,8 +52,14 @@
                 k_SET_OBJECT(json[@"userid"], Yd_user_id);
                 k_SET_OBJECT(_txtphone.text, Yd_user_phone);
                 k_SET_OBJECT(_txtpw.text, Yd_user_pw);
-                [self cancelAction:_cancelBtn];
-                [kNotificationCenter postNotificationName:Yd_Notification_login object:json];
+                [YdLodinTools getTokenAndLoginRongcloudsuccess:^{
+                    NSLog(@"rc 登录成功");
+                    [self cancelAction:_cancelBtn];
+                    [kNotificationCenter postNotificationName:Yd_Notification_login object:json];
+                } fail:^(NSError *error) {
+                    [self showHint:error.domain];
+                }];
+                
             }
             [self hideHud];
         } fail:^(NSError *error) {

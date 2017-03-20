@@ -7,7 +7,7 @@
 //
 
 #import "YdMianViewController.h"
-
+#import "YdLodinTools.h"
 @interface YdMianViewController ()
 
 @end
@@ -18,8 +18,20 @@
     [super viewDidLoad];
     [kNotificationCenter addObserver:self selector:@selector(selectedIndex:) name:Yd_Tabbar_selectedIndex object:nil];
     [self.tabBarItem.selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+}
 
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [YdLodinTools getTokenAndLoginRongcloudsuccess:^{
+        NSLog(@"rc 登录成功");
+    } fail:^(NSError *error) {
+        [self showHint:error.domain];
+        UIViewController *lodinVc = [self.storyboard instantiateViewControllerWithIdentifier:@"YdLodinNavigationViewController"];
+        [self presentViewController:lodinVc animated:YES completion:nil];
+        [kNotificationCenter postNotificationName:Yd_Notification_logout object:nil];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -24,7 +24,7 @@
  *  @param urlStr   URL 名称
  *  @param params  数据字典
  *  @param success 请求成功返回值
- *  @param fail    请求失败返回值
+ *  @param faill    请求失败返回值
  */
 + (void)XC_GET_JSONDataWithUrl:(NSString *)urlStr
                            Params:(NSDictionary*)params
